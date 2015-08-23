@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flat Login V1.0 By roundCube</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+ <div id="background">
+  <div id="Form">
+   <div id="header">
+   <div id="headerLock"></div>
+   <h2 style="line-height:3;">FLAT USER LOGIN</h2>
+   </div>
+   <p style="line-height:18;margin:0 15px 30px;font-weight:600;">Please login to access all our features</p>
+   <div id="loginForm">
+    </br>
+    <form role="form">
+     <div class="form-group">
+      <input type="email" class="form-control" id="email" placeholder="Username">
+     </div>
+     <div class="form-group">
+      <input type="password" class="form-control" id="pwd" placeholder="Password">
+     </div>
+     <button type="submit" class="btn btn-default btn-block login">Submit</button>
+    </form>
+    <div id="or"><p>or</p></div>
+   </div>
+   <div id="socialButtons">
+    <div id="fb">
+     <button type="fb" class="btn btn-default btn-block fb">Facebook Login</button>
+    </div>
+    <div id="google">
+     <button type="google" class="btn btn-default btn-block google">Google+ Login</button>
+    </div>
+   </div>
+   <div id="copyright"><a href="https://www.facebook.com/roundCubeInc?fref=ts">&#169; roundCube</a></div>
+  </div>
+ </div>
+</body>
+<style>
+#background{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+background-image:url(http://www.desktopmedia.eu/data/media/872/Abstract_Background_Wallpaper_011.jpg);
+background-size:100% 100%;
+
+}
+
+#Form{
+position:absolute;
+top:100px;
+height:460px;
+left:35%;
+width:30%;
+background-color:white;
+border-radius:10px;
+
+
+}
+
+#header{
+position:absolute;
+top:0px;
+height:100px;
+left:0%;
+width:100%;
+background-color:rgb(27,187,125);
+border-top-right-radius:10px;
+border-top-left-radius:10px;
+color:white;
+text-align:center;
+}
+
+#loginForm{
+position:absolute;
+top:30%;
+height:200px;
+left:10%;
+width:80%;
+border-bottom-style:solid;
+border-bottom-width:1px;
+border-bottom-color:black;
+border-bottom-color:rgba(0,0,0,0.5);
+
+}
+
+#or{
+position:absolute;
+bottom:-3%;
+height:8%;
+left:46%;
+width:8%;
+background-color:white;
+text-align:center;
+
+}
+
+#socialButtons{
+position:absolute;
+top:78%;
+height:40px;
+left:10%;
+width:80%;
+
+}
+
+#fb{
+position:absolute;
+left:0px;
+top:0px;
+height:100%;
+width:48%;
+
+
+}
+
+#google{
+position:absolute;
+right:0px;
+top:0px;
+height:100%;
+width:48%;
+
+}
+
+.fb{
+background-color:rgb(66,85,153);
+border-color:rgb(66,85,153);
+color:white;
+border-radius:1px;
+}
+
+.fb:hover{
+background-color:rgb(75,98,175);
+border-color:rgb(75,98,175);
+color:white;
+border-radius:1px;
+}
+
+
+.google{
+background-color:rgb(216,81,51);
+border-color:rgb(216,81,51);
+color:white;
+border-radius:1px;
+}
+
+.google:hover{
+background-color:rgb(221,102,77);
+border-color:rgb(221,102,77);
+color:white;
+border-radius:1px;
+}
+
+
+.login{
+background-color:rgb(58,65,84);
+border-color:rgb(58,65,84);
+color:white;
+}
+
+.login:hover{
+background-color:rgb(46,52,67);
+border-color:rgb(46,52,67);
+color:white;
+}
+
+#copyright{
+position:absolute;
+bottom:0px;
+height:20px;
+left:0px;
+width:100%;
+text-align:center;
+}
+
+#copyright a{
+text-decoration:none;
+color:#333;
+
+}
+
+#headerLock{
+position:Absolute;
+top:-40%;
+left:40%;
+width:80px;
+height:80%;
+background-color:white;
+border-radius:50%;
+background-image:url(http://1.bp.blogspot.com/-sJj36V-B-NE/Va5Mpn9sKlI/AAAAAAAABY8/Rlh3colaMZ4/s1600/lock1.png);
+background-size:140% 100%;
+background-position:50% 0%;
+}
+
+input#email {
+    background-image: url(http://4.bp.blogspot.com/-uTfs50Alh_g/Va5MpiLbQCI/AAAAAAAABZA/aznTBmA_jnM/s1600/user1.png);
+    background-repeat: no-repeat;
+ background-position:2% 50%;
+    text-indent: 32px;
+
+ background-size:25px 80%;
+   -webkit-transition:all 0.5s ease;
+  -moz-transition:all 0.5s ease 0s;
+
+}
+
+input#pwd {
+    background-image: url(http://1.bp.blogspot.com/-L2bN3FnWVL4/Va5MwjljekI/AAAAAAAABZM/CQ5jPjZJHIk/s1600/lock2.png);
+    background-repeat: no-repeat;
+ background-position:-4% 25%;
+    text-indent: 32px;
+ background-size:60px 110%;
+   -webkit-transition:all 0.5s ease;
+  -moz-transition:all 0.5s ease 0s;
+}
+
+@media only screen and (max-width:1040px)
+{
+#headerLock{
+left:37%;
+}
+}
+@media only screen and (max-width:1014px)
+{
+#Form{
+width:35%;
+left:32.5%;
+}
+#headerLock{
+left:38%;
+}
+}
+
+@media only screen and (max-width:874px)
+{
+#Form{
+width:40%;
+left:30%;
+}
+}
+
+@media only screen and (max-width:774px)
+{
+#Form{
+width:50%;
+left:25%;
+}
+}
+
+@media only screen and (max-width:608px)
+{
+#Form{
+width:60%;
+left:20%;
+}
+}
+
+@media only screen and (max-width:511px)
+{
+#Form{
+width:70%;
+left:15%;
+}
+}
+
+@media only screen and (max-width:421px)
+{
+#Form{
+width:85%;
+left:7.5%;
+}
+}
+
+@media only screen and (max-width:357px)
+{
+#Form{
+width:95%;
+left:2.5%;
+}
+}
+
+</style>
+</html>

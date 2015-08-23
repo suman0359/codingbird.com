@@ -1,0 +1,69 @@
+/*
+ *Ultima Default Color Scheme hex: #098cc9
+ *Copyright 2014 8Guild.com
+ */
+ 
+.side-navi ul li.current a {
+	-webkit-box-shadow: 0 0 0 2px #0e2034;
+	-moz-box-shadow: 0 0 0 2px #0e2034;
+	box-shadow: 0 0 0 2px #0e2034;
+}
+.jumbotron {
+  background-color: #0e2034;
+}
+.gallery li.gall-expanded > a::after {
+	border-bottom-color: #0e2034;
+}
+.gall-expander {
+	background: #0e2034;
+}
+.pricing-plan.highlited .body {
+	background-color: #0e2034;
+}
+.hero {
+	background-color: #0e2034;
+}
+.page-block.color {
+	background-color: #0e2034;
+}
+.social-networks a:hover {
+	color: #0e2034;
+}
+.footer {
+	background-color: #0e2034;
+}
+.cs-page header {
+	background-color: #0e2034;
+}
+.cs-page .footer {
+	background-color: #0e2034;
+}
+.coming-soon header {
+	background-color: #0e2034;
+}
+.middle-block {
+	background-color: #0e2034;
+}
+.stiky-header {
+	border-bottom-color: #0e2034;
+}
+.main-navi ul li:hover a {
+	color: #0e2034;
+}
+.main-navi ul li.active a {
+	color: #0e2034;
+	border-top-color: #0e2034;
+}
+
+@media screen and (max-width: 991px) {
+	.main-navi.open { 
+	border-bottom-color: #0e2034;
+	}
+	.main-navi ul li a:hover {
+		color: #0e2034;
+	}
+	.main-navi ul li.active a {
+		color: #0e2034;
+		border-left-color: #0e2034;
+	}
+}
