@@ -15,6 +15,7 @@ class My_Account extends CI_Controller {
     
     public function __construct() {
         parent::__construct();
+        $this->load->model('my_account_model');
         $user_id = $this->session->userdata('user_id');
         if ($user_id == NULL) {
             $security_msg = array();
@@ -36,6 +37,11 @@ class My_Account extends CI_Controller {
             $data['user_id']= '<a href="">My Account</a>';
             $data['logout']=  $user_id;//'<a href="">Log Out</a>';
             }
+            
+        $data['user_info'] = $this->my_account_model->fetch_user_info($user_id);
+        
+//        print_r($data['user_info']);
+//        exit();
 
         $data['header']=$this->load->view('includes/header', $data);
         
@@ -44,5 +50,25 @@ class My_Account extends CI_Controller {
         $data['footer']=$this->load->view('includes/footer', $data);
         
         $this->load->view('index', $data);
+    }
+    
+    public function update_my_account(){
+        $data = array();
+        
+        $user_id = $this->session->userdata('user_id');
+        
+        $data['first_name'] = $this->input->post('first_name', TRUE);
+        $data['last_name'] = $this->input->post('last_name', TRUE);
+        $data['email_address'] = $this->input->post('email', TRUE);
+        $data['date_of_birth'] = $this->input->post('date', TRUE);
+        $data['phone_no'] = $this->input->post('phone', TRUE);
+        
+        $this->my_account_model->update_my_account($data, $user_id);
+        
+        
+        $alert_message=array();
+        $this->session->set_userdata($alert_message);
+        $alert_message['successfull']="Successfully Updated Your Account";
+        redirect('my_account');
     }
 }

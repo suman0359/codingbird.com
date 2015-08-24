@@ -1,36 +1,34 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_login extends CI_Controller {
 
-	public function __construct(){
-		parent:: __construct();
-		$this->load->model('user_login_model');
-		
-	}
+    public function __construct() {
+        parent:: __construct();
+        $this->load->model('user_login_model');
+    }
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('login');
-	}
+    /**
+     * Index Page for this controller.
+     *
+     * Maps to the following URL
+     * 		http://example.com/index.php/welcome
+     * 	- or -
+     * 		http://example.com/index.php/welcome/index
+     * 	- or -
+     * Since this controller is set as the default controller in
+     * config/routes.php, it's displayed at http://example.com/
+     *
+     * So any other public methods not prefixed with an underscore will
+     * map to /index.php/welcome/<method_name>
+     * @see http://codeigniter.com/user_guide/general/urls.html
+     */
+    public function index() {
+        $this->load->view('login');
+    }
 
-	
-		public function check_user_login() {
+    public function check_user_login() {
         $user_email = $this->input->post('email', true);
         $user_password = $this->input->post('password', true);
 
@@ -44,10 +42,16 @@ class User_login extends CI_Controller {
             $login_msg['first_name'] = $result->first_name;
             $login_msg['last_name'] = $result->last_name;
             $this->session->set_userdata($login_msg);
+            
+            $alert_message = array();
+            $alert_message['message'] = "Successfully Loged In";
+            $this->session->set_userdata($alert_message);
+            
             redirect('home');
         } else {
-            $login_msg['message'] = "You Enter Wrong Username Or Password";
-            $this->session->set_userdata($login_msg);
+            $alert_message = array();
+            $alert_message['message'] = "Your Email Address or Password Dosn't Match";
+            $this->session->set_userdata($alert_message);
             redirect('user_login');
         }
     }
@@ -62,5 +66,5 @@ class User_login extends CI_Controller {
         $this->session->set_userdata($logout_msg);
         redirect('home', 'refresh');
     }
-	
+
 }
