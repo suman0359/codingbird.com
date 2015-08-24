@@ -586,7 +586,7 @@ footer h2, footer p{
     width: 90%;
 }
 
-button[name="update-account"], button[name="update-password"]{
+button[name="update-account"], button[name="update_password"]{
     padding: 10px !important;
 }
 

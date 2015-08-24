@@ -38,7 +38,8 @@ class My_Account extends CI_Controller {
             $data['logout']=  $user_id;//'<a href="">Log Out</a>';
             }
             
-        $data['user_info'] = $this->my_account_model->fetch_user_info($user_id);
+        $data['user_info'] = $this->my_account_model->select_user_info($user_id);
+        $data['billing_address'] = $this->my_account_model->select_billing_address_info($user_id);
         
 //        print_r($data['user_info']);
 //        exit();
@@ -69,6 +70,32 @@ class My_Account extends CI_Controller {
         $alert_message=array();
         $this->session->set_userdata($alert_message);
         $alert_message['successfull']="Successfully Updated Your Account";
+        redirect('my_account');
+    }
+    
+    public function update_billing_address_info(){
+        $data = array();
+        
+        $user_id = $this->session->userdata('user_id');
+        
+        $data['country']=$this->input->post('country', TRUE);
+        $data['first_name'] = $this->input->post('first_name', TRUE);
+        $data['last_name'] = $this->input->post('last_name', TRUE);
+        $data['company_name']=$this->input->post('company_name', TRUE);
+        $data['address']=$this->input->post('address', TRUE);
+        $data['optional_address']=  $this->input->post('optional_address');
+        $data['city_state']=  $this->input->post('city_state', TRUE);
+        $data['zip_code']=  $this->input->post('zip_code', TRUE);
+        $data['email_address'] = $this->input->post('email', TRUE);
+        $data['phone']=  $this->input->post('phone', TRUE);
+        
+        
+        $this->my_account_model->update_billing_address_info($data, $user_id);
+        
+        
+        $alert_message=array();
+        $this->session->set_userdata($alert_message);
+        $alert_message['successfull']="Successfully Updated Your Billing Address";
         redirect('my_account');
     }
 }

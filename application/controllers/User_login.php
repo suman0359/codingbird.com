@@ -33,8 +33,7 @@ class User_login extends CI_Controller {
         $user_password = $this->input->post('password', true);
 
         $result = $this->user_login_model->check_login_info($user_email, $user_password);
-        // print_r($result);
-        // exit();
+
         $login_msg = array();
         if ($result) {
             $login_msg['user_id'] = $result->user_id;

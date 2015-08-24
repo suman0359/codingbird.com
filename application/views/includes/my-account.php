@@ -108,7 +108,7 @@ if ($alert_message !== NULL) {
                         </div>
 
                         <div class="form-group pull-right">
-                            <button type="submit" name="update_account" class="btn btn-primary">Update Password</button>
+                            <button type="submit" name="update_password" class="btn btn-primary">Update Password</button>
                         </div>
                     </div>
 
@@ -121,10 +121,10 @@ if ($alert_message !== NULL) {
         <div class="col-md-6">
 
             <h2>Billing Address</h2>
-            <form action="<?php echo base_url() . "my_account/update_billing_address"; ?>" method="POST">
+            <form action="<?php echo base_url() . "my_account/update_billing_address_info"; ?>" method="POST">
                 <div class="form-group">
                     <label for="countryName">Country Name</label>
-                    <select id="countryName" class="form-control">
+                    <select id="countryName" name="country" class="form-control">
                         <option>Select Country....</option>
                         <option data-countryCode="DZ" value="213">Algeria (+213)</option>
                         <option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -347,29 +347,29 @@ if ($alert_message !== NULL) {
 
                     <div class="form-group col-md-6">
                         <label for="labelForFirstName">First Name</label>
-                        <input type="text" name="first_name" placeholder="First Name" class="form-control">
+                        <input type="text" name="first_name" placeholder="First Name" class="form-control" value="<?php echo $billing_address->first_name ;?>" />
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="labelForLastName">Last Name</label>
-                        <input type="text" name="last_name" placeholder="Last Name" class="form-control">
+                        <input type="text" name="last_name" placeholder="Last Name" class="form-control"  value="<?php echo $billing_address->last_name ;?>">
                     </div>
 
                 </div>
 
                 <div class="form-group">
                     <label for="labelForCompanyName">Company Name</label>
-                    <input type="text" name="company_name" class="form-control" placeholder="Company Name">
+                    <input type="text" name="company_name" class="form-control" placeholder="Company Name" value="<?php echo $billing_address->company_name ;?>">
                 </div>
 
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" name="address" class="form-control" placeholder="Address">
+                    <input type="text" name="address" class="form-control" placeholder="Address"  value="<?php echo $billing_address->address ;?>">
 
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="optional_address" class="form-control" placeholder="Optional Address">
+                    <input type="text" name="optional_address" class="form-control" placeholder="Optional Address" value="<?php echo $billing_address->optional_address;?>">
                 </div>
 
 
@@ -378,25 +378,25 @@ if ($alert_message !== NULL) {
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="labelForTownCity">State / City</label>
-                            <input type="text" name="city_state" class="form-control" placeholder="State / City">
+                            <input type="text" name="city_state" class="form-control" placeholder="State / City" value="<?php echo $billing_address->city_state ;?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="labelForZipCode">Zip Code</label>
-                            <input type="number" class="form-control" placeholder="Zip Code" name="zipe_code">
+                            <input type="number" class="form-control" placeholder="Zip Code" name="zip_code" value="<?php echo $billing_address->zip_code ;?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="labelForEmail">Email Address</label>
-                            <input type="email" class="form-control" placeholder="Email Address" name="email">
+                            <input type="email" class="form-control" placeholder="Email Address" name="email" value="<?php echo $billing_address->email_address ;?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="labelForPhone">Phone Number</label>
-                            <input type="number" class="form-control" name="phone" placeholder="Phone Number">
+                            <input type="number" class="form-control" name="phone" placeholder="Phone Number" value="<?php echo $billing_address->phone ;?>">
                         </div>
                     </div>
 

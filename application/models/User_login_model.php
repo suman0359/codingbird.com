@@ -16,5 +16,15 @@ class User_login_model extends CI_Model {
         $result = $query_result->row();
         return $result;
     }
+    
+    public function check_login_register($user_email) {
+        $this->db->select('*');
+        $this->db->from('users');
+        $this->db->where('email_address', $user_email);
+        $this->db->where('status', 1);
+        $query_result = $this->db->get();
+        $result = $query_result->row();
+        return $result;
+    }
 
 }
