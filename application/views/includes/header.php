@@ -102,8 +102,10 @@
             <li><a href="<?php echo base_url(); ?>#">Portfolio</a></li>
             <li><a href="<?php echo base_url(); ?>">About Us</a></li>
             <li><a href="<?php echo base_url(); ?>">Contact Us</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order Now <span class="caret"></span></a>
+            <li><a href="<?php echo base_url()."products"; ?>">Products</a></li>
+            <li><a href="<?php echo base_url()."order"; ?>">Order Now</a></li>
+            <!-- <li class="dropdown">
+                <a href="<?php echo base_url()."products"; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order Now <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="<?php echo base_url(); ?>products/facebook_cover">Facebook Cover</a></li>
                 <li><a href="<?php echo base_url(); ?>products/twitter_cover">Twitter Cover</a></li>
@@ -113,7 +115,7 @@
                 <li><a href="<?php echo base_url(); ?>products/online_vote">Online Vote</a></li>
                 <li><a href="<?php echo base_url(); ?>products/others">Others</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
           
 
@@ -127,7 +129,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shopping Cart <span style="margin-left: 5px; background: #000; color: #fff; padding: 5px 7px; border-radius: 10px;">10</span></a>
                   <ul class="dropdown-menu">
-
+                      <li>
+                         <p>Under Construction</p>
+                      </li>
                   </ul>
                 </li>
             </ul>

@@ -1,13 +1,13 @@
 <?php include("includes/header.php") ?>
 
 <div align="center"> 
-    <img src="<?php echo base_url(); ?>img/order page/facebook.png" alt="Mountain View" style="width:2004px;height:238px" align="center;">
+    <img src="<?php echo base_url(); ?>img/order-page/facebook.png" alt="Mountain View" style="width:2004px;height:238px" align="center;">
 </div>
 
 <div class="container order-page facebook-order">
     <div class="row">
         <div class="col-md-6">
-            <img src="<?php echo base_url(); ?>img/order page/logo-facebook.png" alt="">
+            <img src="<?php echo base_url(); ?>img/order-page/logo-facebook.png" alt="">
         </div>
 
         <div class="col-md-6">
@@ -26,7 +26,7 @@
 
             <p>
                 <a href="">
-                    <img src="<?php echo base_url(); ?>img/order page/concern.png" alt="">
+                    <img src="<?php echo base_url(); ?>img/order-page/concern.png" alt="">
                 </a>
             </p>
 

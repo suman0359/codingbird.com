@@ -519,6 +519,67 @@ ul#main-menu li a {
     transform:none
 }
 
+/* Order Page StyleSheet */
+
+section.order-page *{
+    color: #383838;
+}
+
+section.order-page .order-button{
+    width: 100%;
+    height: 320px;
+    border: 1px solid #484848;
+    padding-top: 10px;
+}
+
+section.order-page .row{
+    margin-bottom: 20px;
+}
+
+section.order-page .row .crcle-icon{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    
+    background-color: #5bc0de;
+    
+    display: table-cell;
+    vertical-align: middle;
+
+    margin: 0 auto !important;
+    display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-flex-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+section.order-page .row .col-md-3{
+    margin-bottom: 30px;
+}
+
+section.order-page .row .crcle-icon h3{
+    color: #fff;
+}
+
+section.order-page .row .col-md-3 .order-button *{
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.order-page .row .order-button .title-button, section.order-page .row .order-button .title-button h3, section.order-page .row .order-button input[type="image"]{
+    margin: 10px 0;
+}
+
+section.order-page .row .order-button input[type="image"]{
+    
+}
+
+
 /* ----------------------------------  End  -------------------------------------*/
 footer{
 	background: #313447;
@@ -847,6 +908,39 @@ table.shop_table td.actions {
     border-bottom: 1px solid transparent;
     width: 100%;
     margin: 0 0 10px 0;
+}
+
+/* Proeucts List */
+
+.product-gird{
+    width: 100%;
+    height: 500px;
+    background-color: #e7e7ea;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.product-header{
+   border-radius: 5px 5px 0 0;
+}
+
+.product-header h4{
+    padding: 10px 0px;
+}
+
+.product-body{
+    padding: 10px;
+    padding-top: 0;
+}
+
+.product-image a img{
+    width: 100%; 
+    height: auto;
+}
+
+.product-footer button{
+    margin: 10px;
 }
 
 /* Order Details */

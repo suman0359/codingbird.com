@@ -60,7 +60,7 @@ $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 
-$autoload['libraries'] = $autoload['libraries'] = array('database', 'email', 'session');
+$autoload['libraries'] = $autoload['libraries'] = array('database', 'email', 'session', 'table', 'cart');
 
 
 /*
@@ -88,7 +88,7 @@ $autoload['drivers'] = array('cache');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'file');
+$autoload['helper'] = array('url', 'file', 'form');
 
 /*
 | -------------------------------------------------------------------

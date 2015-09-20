@@ -1,12 +1,12 @@
 <?php include("includes/header.php") ?>
 
 <div align="center"> 
-    <img src="img/order page/Others banner.png" alt="Mountain View" style="width:2004px;height:238px" align="center;">
+    <img src="img/order-page/Others banner.png" alt="Mountain View" style="width:2004px;height:238px" align="center;">
 </div>
 <div class="container order-page facebook-order">
     <div class="row">
         <div class="col-md-6">
-            <img  src="img/order page/Others image.png" alt="">
+            <img  src="img/order-page/Others image.png" alt="">
         </div>
 
         <div class="col-md-6">

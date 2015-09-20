@@ -64,8 +64,10 @@ class CI_Cart {
 	 * @var string
 	 */
 	public $product_name_rules = '\w \-\.\:';
+        
+        public $product_image_rules = '\w \-\.\ \:';
 
-	/**
+        /**
 	 * only allow safe product names
 	 *
 	 * @var bool

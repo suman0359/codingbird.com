@@ -18,7 +18,7 @@
 <div class="container margin--top-50">
     <div class="row">
         <div class="col-md-12">
-            <form action="<?php echo base_url()."checkout"; ?>" method="post">
+            <form action="<?php echo base_url() . "checkout"; ?>" method="post">
 
 
                 <table class="shop_table cart" cellspacing="0">
